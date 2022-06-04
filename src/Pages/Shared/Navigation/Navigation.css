@@ -1,0 +1,14 @@
+.trip-to-paradise-navbar {
+    background-color: #2a2a2a;
+    color: #cbab71;
+}
+
+.trip-to-paradise-navbar-brand {
+    color: #cbab71;
+    font-weight: 700;
+}
+
+.trip-to-paradise-navbar-brand:hover {
+    color: steelblue;
+
+}
