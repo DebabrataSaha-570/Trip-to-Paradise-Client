@@ -10,7 +10,7 @@ const AboutUs = () => {
                         className='img-fluid' alt="" />
                 </div>
                 <div className="col-md-7">
-                    <div className='ps-3 aboutUsTextDiv'>
+                    <div className='ps-3 aboutUsTextDiv '>
                         <h6>About Us</h6>
                         <h3>Plan Your Trip with US</h3>
                         <p>
