@@ -1,0 +1,15 @@
+.contactUs a {
+    text-decoration: none;
+    margin-right: 3px;
+    color: #c29d59;
+}
+
+.aboutUsInputButton {
+    background-color: #c29d59;
+    color: white;
+}
+
+.aboutUsFooterParentDiv {
+    background-color: #2a2a2a;
+    color: rgba(240, 248, 255, .712);
+}
