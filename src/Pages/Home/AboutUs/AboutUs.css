@@ -1,0 +1,10 @@
+.aboutUsTextDiv h6 {
+    color: #c29d59;
+    border-left: 4px solid #c29d59;
+    padding-left: 7px;
+}
+
+.aboutUsTextDiv button {
+    background-color: #c29d59;
+    color: whitesmoke;
+}
