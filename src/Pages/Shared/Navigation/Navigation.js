@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 import './Navigation.css';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
@@ -16,10 +17,17 @@ const Navigation = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link to="/home" className='nav-link active'>Home</Link>
+                                {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" href="#">Login</a>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/addService" className="nav-link active">
+                                    AddService
+                                </Link>
+                                {/* <a className="nav-link active" href="#">AddService</a> */}
                             </li>
 
                             <li className="nav-item">
