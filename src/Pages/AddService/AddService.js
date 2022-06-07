@@ -21,8 +21,22 @@ const AddService = () => {
         const dressValue = dressCodeRef.current.value;
         const priceValue = priceRef.current.value;
 
-        const serviceData = { nameValue, descriptionValue, imageValue, durationValue, dressValue, priceValue }
-        console.log('serviceData', serviceData)
+        const serviceData = { placeName: nameValue, description: descriptionValue, image: imageValue, duration: durationValue, dress: dressValue, price: priceValue, status: 'Pending' }
+
+        fetch('http://localhost:5000/addService', {
+            method: 'POST',
+            body: JSON.stringify(serviceData),
+            headers: {
+                'Content-type': 'application/json'
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Service added successfully')
+                    e.target.reset()
+                }
+            })
 
     }
     return (
