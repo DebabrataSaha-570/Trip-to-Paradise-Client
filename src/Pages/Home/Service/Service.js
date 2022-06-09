@@ -2,7 +2,8 @@ import React from 'react';
 import './Service.css';
 
 const Service = (props) => {
-    const { placeName, description, image, duration, dress, price } = props.service;
+
+    const { _id, placeName, description, image, duration, dress, price } = props.service;
     return (
         <div className='col-md-4'>
             <div class="card shadow mb-3" style={{ width: '22rem' }}>
@@ -12,7 +13,7 @@ const Service = (props) => {
                     <p class="card-text">{description.split(' ').splice(0, 17).join(' ')}...</p>
                     <div className='d-flex justify-content-between'>
                         <h5>${price}</h5>
-                        <button className='btn serviceBookNowBtn'>Book Now</button>
+                        <button onClick={() => props.handleBookNow(_id)} className='btn serviceBookNowBtn'>Book Now</button>
                     </div>
                 </div>
             </div>
