@@ -24,6 +24,9 @@ const Navigation = () => {
                                 <a className="nav-link active" href="#">Login</a>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link active" to="/myOrders">My Orders</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link to="/addService" className="nav-link active">
                                     AddService
                                 </Link>
