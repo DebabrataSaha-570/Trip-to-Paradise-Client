@@ -21,9 +21,11 @@ const Services = () => {
     }, [])
     return (
         <>
-            <section className='container mb-3'>
-                <h3>Trending, Best Selling Tours And</h3>
-                <h3>Fun Destinations</h3>
+            <section className='container '>
+                <div className='m-1'>
+                    <h3>Trending, Best Selling Tours And</h3>
+                    <h3>Fun Destinations</h3>
+                </div>
 
                 <div className="row">
                     {

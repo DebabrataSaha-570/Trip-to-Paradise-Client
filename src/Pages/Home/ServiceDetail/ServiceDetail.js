@@ -44,7 +44,7 @@ const ServiceDetail = () => {
         const phoneNumberValue = phoneNumberRef.current.value;
         const ticketNumberValue = ticketNumberRef.current.value;
 
-        const bookingData = { name: nameValue, email: emailValue, phoneNumber: phoneNumberValue, date: selectedDate, ticketNumber: ticketNumberValue, service: service }
+        const bookingData = { name: nameValue, email: emailValue, phoneNumber: phoneNumberValue, date: selectedDate, ticketNumber: ticketNumberValue, placeName: placeName, description: description, image: image, duration: duration, dress: dress, price: price, status: status }
 
         fetch('http://localhost:5000/addBooking', {
             method: 'POST',

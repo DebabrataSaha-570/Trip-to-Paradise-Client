@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('http://localhost:5000/bookings/?email=sahadebabrata570@gmail.com')
             .then(res => res.json())
             .then(data => {
                 setOrders(data)

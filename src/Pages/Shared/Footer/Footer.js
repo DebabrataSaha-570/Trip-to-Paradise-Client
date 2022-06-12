@@ -6,11 +6,11 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <section className='p-5 aboutUsFooterParentDiv'>
+        <section className='py-5 aboutUsFooterParentDiv'>
             <div className='container'>
                 <div className="row p-3">
                     <div className="col-md-4 px-4">
-                        <h2>Trip to Paradise</h2>
+                        <h2 className="footer-heading">Trip to Paradise</h2>
                         <p>Trip to Paradise sit amet consectetur adipisicing elit. Perferendis sapiente tenetur officiis explicabo fugit, sit mollitia eum atque excepturi quaerat autem.</p>
 
                         <div class="input-group mb-3 mt-5">
@@ -35,7 +35,7 @@ const Footer = () => {
                     <div className="col-md-4 contactUs px-4">
                         <h3>Need Help?</h3>
                         <hr />
-                        <div>
+                        <div className=''>
                             <small>Call Us</small>
                             <p>016233333333</p>
 

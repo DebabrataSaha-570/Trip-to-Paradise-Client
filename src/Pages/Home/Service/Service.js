@@ -5,7 +5,7 @@ const Service = (props) => {
 
     const { _id, placeName, description, image, duration, dress, price } = props.service;
     return (
-        <div className='col-md-4'>
+        <div className='col-md-4 d-flex justify-content-center'>
             <div class="card shadow mb-3" style={{ width: '22rem' }}>
                 <img src={image} class="card-img-top" alt="..." />
                 <div class="card-body">

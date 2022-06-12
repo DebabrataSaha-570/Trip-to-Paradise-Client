@@ -1,7 +1,17 @@
+.footer-heading {
+    color: #c29d59;
+    font-weight: 700;
+}
+
 .contactUs a {
     text-decoration: none;
     margin-right: 3px;
     color: #c29d59;
+}
+
+.contactUs div {
+    border-left: 3px solid #c29d59;
+    padding-left: 7px;
 }
 
 .aboutUsInputButton {

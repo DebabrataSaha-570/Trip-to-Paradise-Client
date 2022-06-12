@@ -2,8 +2,8 @@ import React from 'react';
 
 const Order = (props) => {
     console.log(props)
-    const { _id, name, phoneNumber, email, date, ticketNumber } = props.order;
-    const { description, image, price, status, placeName } = props.order?.service;
+    const { _id, name, phoneNumber, email, date, ticketNumber, image, placeName, price, status } = props.order;
+
 
 
     return (
@@ -39,11 +39,12 @@ const Order = (props) => {
                                 </tr>
                                 <tr>
                                     <td>Price:</td>
-                                    <td>${price}</td>
+                                    <td>${price * ticketNumber}</td>
                                 </tr>
                                 <tr>
                                     <td>Status:</td>
-                                    <td className='text-warning'>{status}</td>
+                                    {status === 'Approved' && <td className='text-success'>{status}</td>}
+                                    {status === 'Pending' && <td className='text-warning'>{status}</td>}
                                 </tr>
 
                             </tbody>

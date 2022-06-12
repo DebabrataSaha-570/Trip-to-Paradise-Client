@@ -8,7 +8,7 @@ const Gutters = () => {
         <section className='container mt-5'>
             <div className="row">
                 <div className="col-md-4  ">
-                    <div className='d-flex gutterDiv p-3'>
+                    <div className='d-flex gutterDiv p-3 mb-2'>
                         <FontAwesomeIcon icon={faGlobe} size="2x" />
                         <div className='ps-3'>
                             <h4>700+ DESTINATIONS</h4>
@@ -17,7 +17,7 @@ const Gutters = () => {
                     </div>
                 </div>
                 <div className="col-md-4  ">
-                    <div className='d-flex gutterDiv p-3'>
+                    <div className='d-flex gutterDiv p-3 mb-2'>
                         <FontAwesomeIcon icon={faCircleCheck} size="2x" />
                         <div className='ps-3'>
                             <h4>BEST PRICE GUARANTEE</h4>
@@ -26,7 +26,7 @@ const Gutters = () => {
                     </div>
                 </div>
                 <div className="col-md-4  ">
-                    <div className='d-flex gutterDiv p-3'>
+                    <div className='d-flex gutterDiv p-3 mb-2'>
                         <FontAwesomeIcon icon={faHeadset} size="2x" />
                         <div className='ps-3'>
                             <h4>TOP NOTCH SUPPORT</h4>
