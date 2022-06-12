@@ -58,26 +58,28 @@ const ManageOrders = () => {
             <section className='container'>
                 <h3 className='text-center my-4'>Manage Orders</h3>
 
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Booking</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div className="table-responsive">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Booking</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        {
-                            orders.map(order => <SingleOrder key={order._id} order={order} handleDelete={handleDelete} handleApprove={handleApprove}></SingleOrder>)
-                        }
+                            {
+                                orders.map(order => <SingleOrder key={order._id} order={order} handleDelete={handleDelete} handleApprove={handleApprove}></SingleOrder>)
+                            }
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </section>
             <Footer></Footer>
         </>

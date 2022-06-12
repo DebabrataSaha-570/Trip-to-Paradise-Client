@@ -23,7 +23,7 @@ const SingleOrder = (props) => {
             }
             <td>
                 {status === 'Pending' && <button onClick={() => props.handleApprove(_id)} className='btn btn-success'>Approve</button>}
-                {status === 'Approved' && <button className='btn btn-success disabled'>Approve</button>}
+                {status === 'Approved' && <button className='btn btn-success disabled '>Approve</button>}
                 <button onClick={() => props.handleDelete(_id)} className='btn btn-danger ms-2'>Delete</button>
             </td>
         </tr>

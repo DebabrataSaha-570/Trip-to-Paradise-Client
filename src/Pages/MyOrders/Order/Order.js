@@ -8,7 +8,7 @@ const Order = (props) => {
 
     return (
         <>
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4 d-flex justify-content-center mb-4">
                 <div class="card shadow" style={{ width: '21rem' }}>
                     <img src={image} class="card-img-top" alt="..." />
                     <div class="card-body">
