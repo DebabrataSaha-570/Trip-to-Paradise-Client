@@ -13,7 +13,7 @@ const Navigation = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-dark trip-to-paradise-navbar sticky-top">
                 <div className="container">
-                    <a className="navbar-brand trip-to-paradise-navbar-brand" href="#"><FontAwesomeIcon icon={faLocationDot} /> Trip to Paradise</a>
+                    <Link className="navbar-brand trip-to-paradise-navbar-brand" to="/home"><FontAwesomeIcon icon={faLocationDot} /> Trip to Paradise</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -24,7 +24,7 @@ const Navigation = () => {
                             </li>
                             {user.email ?
                                 <li className="nav-item">
-                                    <a onClick={logOut} className="nav-link active">LogOut</a>
+                                    <a onClick={logOut} className="nav-link active">Logout</a>
                                 </li>
                                 :
                                 <li className="nav-item">

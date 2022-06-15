@@ -3,12 +3,16 @@
     color: #cbab71;
 }
 
+.trip-to-paradise-navbar a {
+    cursor: pointer;
+}
+
 .trip-to-paradise-navbar-brand {
     color: #cbab71;
     font-weight: 700;
 }
 
-.trip-to-paradise-navbar-brand:hover {
+/* .trip-to-paradise-navbar-brand:hover {
     color: steelblue;
 
-}
+} */
