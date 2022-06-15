@@ -27,11 +27,18 @@ const Services = () => {
                     <h3>Fun Destinations</h3>
                 </div>
 
-                <div className="row">
+                {services.length > 0 ? <div className="row">
                     {
                         services.map(service => <Service key={service._id} service={service} handleBookNow={handleBookNow}></Service>)
                     }
                 </div>
+                    :
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
             </section>
         </>
     );
