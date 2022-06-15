@@ -9,7 +9,7 @@ const MyOrders = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings/?email=${user?.email}`)
+        fetch(`https://sheltered-oasis-48359.herokuapp.com/bookings/?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data)
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const handleCancel = (id) => {
         const confirm = window.confirm('Are your sure, you want to cancel this booking?')
         if (confirm) {
-            fetch(`http://localhost:5000/cancelService/${id}`, {
+            fetch(`https://sheltered-oasis-48359.herokuapp.com/cancelService/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

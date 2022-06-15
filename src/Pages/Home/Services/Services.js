@@ -12,7 +12,7 @@ const Services = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://sheltered-oasis-48359.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)

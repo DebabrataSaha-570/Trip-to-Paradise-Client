@@ -26,7 +26,7 @@ const ServiceDetail = () => {
     const { placeName, description, image, duration, dress, price, status } = service;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${Id}`)
+        fetch(`https://sheltered-oasis-48359.herokuapp.com/service/${Id}`)
             .then(res => res.json())
             .then(data => {
                 setService(data)
@@ -48,7 +48,7 @@ const ServiceDetail = () => {
 
         const bookingData = { name: nameValue, email: emailValue, phoneNumber: phoneNumberValue, date: selectedDate, ticketNumber: ticketNumberValue, placeName: placeName, description: description, image: image, duration: duration, dress: dress, price: price, status: status }
 
-        fetch('http://localhost:5000/addBooking', {
+        fetch('https://sheltered-oasis-48359.herokuapp.com/addBooking', {
             method: 'POST',
             body: JSON.stringify(bookingData),
             headers: {

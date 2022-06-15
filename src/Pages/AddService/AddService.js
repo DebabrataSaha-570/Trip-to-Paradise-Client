@@ -23,7 +23,7 @@ const AddService = () => {
 
         const serviceData = { placeName: nameValue, description: descriptionValue, image: imageValue, duration: durationValue, dress: dressValue, price: priceValue, status: 'Pending' }
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://sheltered-oasis-48359.herokuapp.com/addService', {
             method: 'POST',
             body: JSON.stringify(serviceData),
             headers: {

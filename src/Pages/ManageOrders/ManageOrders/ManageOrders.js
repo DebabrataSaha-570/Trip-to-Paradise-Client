@@ -7,7 +7,7 @@ const ManageOrders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/allBookings')
+        fetch('https://sheltered-oasis-48359.herokuapp.com/allBookings')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -15,7 +15,7 @@ const ManageOrders = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm('Are you sure , you want to delete this Order?')
         if (confirm) {
-            fetch(`http://localhost:5000/cancelService/${id}`, {
+            fetch(`https://sheltered-oasis-48359.herokuapp.com/cancelService/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -30,7 +30,7 @@ const ManageOrders = () => {
     }
 
     const handleApprove = (id) => {
-        fetch(`http://localhost:5000/approveOrder/${id}`, {
+        fetch(`https://sheltered-oasis-48359.herokuapp.com/approveOrder/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 status: 'Approved'
@@ -45,7 +45,7 @@ const ManageOrders = () => {
                     alert('Order Approved successfully')
 
 
-                    fetch('http://localhost:5000/allBookings')
+                    fetch('https://sheltered-oasis-48359.herokuapp.com/allBookings')
                         .then(res => res.json())
                         .then(data => setOrders(data))
 
