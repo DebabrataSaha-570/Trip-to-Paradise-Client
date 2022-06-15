@@ -17,6 +17,6 @@ It is a website for booking people in many tour event and manage them. I have li
 - Express JS
 - MongoDB
 
-[Live Link](https://trip-to-paradise.web.app/)
+[Live Link](https://trip-to-paradisee.web.app/)
 
 You can see server side code in [Trip to paradise Server]()
