@@ -33,11 +33,18 @@ const MyOrders = () => {
             <Navigation></Navigation>
             <section className="container">
                 <h4 className='text-center my-4'>My Orders</h4>
-                <div className="row">
+                {orders.length > 0 ? <div className="row">
                     {
                         orders.map(order => <Order key={order._id} order={order} handleCancel={handleCancel}></Order>)
                     }
                 </div>
+                    :
+                    <div className="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
             </section>
             <Footer></Footer>
         </>

@@ -22,7 +22,7 @@ const Services = () => {
     return (
         <>
             <section className='container '>
-                <div className='m-1'>
+                <div className='ms-3 mb-2'>
                     <h3>Trending, Best Selling Tours And</h3>
                     <h3>Fun Destinations</h3>
                 </div>

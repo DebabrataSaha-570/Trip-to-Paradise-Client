@@ -44,7 +44,8 @@ const ManageOrders = () => {
                 if (data.modifiedCount > 0) {
                     alert('Order Approved successfully')
 
-                    fetch('http://localhost:5000/bookings')
+
+                    fetch('http://localhost:5000/allBookings')
                         .then(res => res.json())
                         .then(data => setOrders(data))
 
@@ -58,7 +59,7 @@ const ManageOrders = () => {
             <section className='container'>
                 <h3 className='text-center my-4'>Manage Orders</h3>
 
-                <div className="table-responsive">
+                {orders.length > 0 ? <div className="table-responsive">
                     <table className="table">
                         <thead>
                             <tr>
@@ -80,6 +81,13 @@ const ManageOrders = () => {
                         </tbody>
                     </table>
                 </div>
+                    :
+                    <div className="text-center">
+                        <div class="spinner-border text-primary " role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
             </section>
             <Footer></Footer>
         </>

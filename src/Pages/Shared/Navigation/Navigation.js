@@ -4,8 +4,11 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 import './Navigation.css';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
+    const { user, logOut } = useAuth()
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark trip-to-paradise-navbar sticky-top">
@@ -18,27 +21,37 @@ const Navigation = () => {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link to="/home" className='nav-link active'>Home</Link>
-                                {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" href="#">Login</a>
-                            </li>
-                            <li className="nav-item">
+                            {user.email ?
+                                <li className="nav-item">
+                                    <a onClick={logOut} className="nav-link active">LogOut</a>
+                                </li>
+                                :
+                                <li className="nav-item">
+                                    <Link to="/login" className="nav-link active">Login</Link>
+                                </li>
+
+                            }
+                            {user.email && <li className="nav-item">
                                 <Link className="nav-link active" to="/myOrders">My Orders</Link>
-                            </li>
-                            <li className="nav-item">
+                            </li>}
+                            {user.email && <li className="nav-item">
                                 <Link className="nav-link active" to="/manageOrder">Manage Orders</Link>
-                            </li>
-                            <li className="nav-item">
+                            </li>}
+                            {user.email && <li className="nav-item">
                                 <Link to="/addService" className="nav-link active">
                                     AddService
                                 </Link>
-                                {/* <a className="nav-link active" href="#">AddService</a> */}
-                            </li>
+                            </li>}
 
                             <li className="nav-item">
                                 <a className="nav-link active">Contact Us</a>
                             </li>
+                            {user.email && <li className="nav-item">
+                                <a className="nav-link active">
+                                    <img src={user.photoURL} alt="" width="30" height="24" />
+                                </a>
+                            </li>}
                         </ul>
 
                     </div>
