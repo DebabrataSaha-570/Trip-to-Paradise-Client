@@ -9,9 +9,11 @@ import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker'
 
 import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
+import useAuth from '../../../hooks/useAuth';
 
 
 const ServiceDetail = () => {
+    const { user } = useAuth()
     const [selectedDate, setSelectedDate] = useState(new Date().toLocaleDateString())
     const navigate = useNavigate()
     const handleDateChange = (date) => {
@@ -105,12 +107,12 @@ const ServiceDetail = () => {
                             <form onSubmit={handleBookNow}>
                                 <div class="mb-3 w-100 mx-auto">
                                     <label for="nameInput" class="form-label">Name</label>
-                                    <input type="text" ref={nameRef} class="form-control" id="nameInput" placeholder="Your Name" />
+                                    <input defaultValue={user?.displayName || ''} type="text" ref={nameRef} class="form-control" id="nameInput" placeholder="Your Name" />
                                 </div>
 
                                 <div class="mb-3 w-100 mx-auto">
                                     <label for="emailInput" class="form-label">Email Address</label>
-                                    <input type="email" ref={emailRef} class="form-control" id="emailInput" placeholder="Email Address" />
+                                    <input defaultValue={user?.email || ''} type="email" ref={emailRef} class="form-control" id="emailInput" placeholder="Email Address" />
                                 </div>
                                 <div class="mb-3 w-100 mx-auto">
                                     <label for="phoneInput" class="form-label">Phone Number</label>

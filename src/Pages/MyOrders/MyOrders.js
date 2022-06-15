@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Navigation from '../Shared/Navigation/Navigation';
 import Footer from '../Shared/Footer/Footer';
 import Order from './Order/Order';
-
+import useAuth from '../../hooks/useAuth'
 const MyOrders = () => {
+    const { user } = useAuth()
     const [orders, setOrders] = useState([])
 
+
     useEffect(() => {
-        fetch('http://localhost:5000/bookings/?email=sahadebabrata570@gmail.com')
+        fetch(`http://localhost:5000/bookings/?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data)
